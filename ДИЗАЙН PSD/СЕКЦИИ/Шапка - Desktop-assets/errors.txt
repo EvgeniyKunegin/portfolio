@@ -1,0 +1,2 @@
+[2020-01-30 23:59:43] layer "work-pic.img": Unsupported extension: img
+[2020-01-30 23:59:00] layer "yurij.kluchevsky@gmail.com": Unsupported extension: com
