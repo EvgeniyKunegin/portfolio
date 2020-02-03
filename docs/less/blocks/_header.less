@@ -1,17 +1,17 @@
 .header {
     margin: 0;
-    padding-top: 75px;
+    padding-top: 65px;
     max-width: 1600px;
     height: 900px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .header-top{
     margin-bottom: 180px;
-    min-width: 1400px;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: baseline;
 }
 
@@ -31,13 +31,13 @@
     left:-5px;
     right: -5px;
     height: 10px;
-    background-color: yellow;
+    background-color: #fbdc4d;
     z-index: -1;
  }   
 
 .header-top__nav{
     display: flex;
-    margin: 0 390px;
+    max-width: 425px;
 }
 
 .header-top__nav-item{
@@ -63,7 +63,7 @@
     left: 0;
     width: 0;
     height: 5px;
-    background-color: yellow;
+    background-color: #fbdc4d;
     transition: .5s;
     z-index: -1;
 }
@@ -84,32 +84,38 @@
      }
  }
 
+ .icon-social-wrapper{
+     display: inline-block;
+ }
+
 // ---// Header-top------
 
 .container{
     max-width: 1140px;
+ 
+}
+
+.header-content{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
 }
 
 .container-about{
     width: 50%;
     border: solid 1px ;
+
 }
 
 .container-photo{
     width: 50%;
+    max-width: 460px;
+    display: flex;
+    align-items: flex-end;
 }
-
-   
-
-.photo-work-pic{
-
-}
-
 
 .my-name__wrapper{
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .my-name{
@@ -119,6 +125,7 @@
     line-height: 1;
     position:relative;
     z-index: 2;
+    letter-spacing: 5px;
 }
 
 .my-name:after{
@@ -128,13 +135,13 @@
     left:-5px;
     right: -5px;
     height: 10px;
-    background-color: yellow;
+    background-color: #fbdc4d;
     z-index: -1;
 }
 
 .container__text-about-me{
     width: 85%;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .text-about-me{
@@ -149,7 +156,7 @@
 .button-meet{
     margin-right: 20px;
     display: inline-block;
-    padding: 17px 43px;
+    padding: 19px 43px;
     font-weight: bold;
     font-size: 22px;
     background-color: #fbdc4d;

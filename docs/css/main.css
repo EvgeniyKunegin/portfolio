@@ -69,21 +69,21 @@ button {
 }
 .header {
   margin: 0;
-  padding-top: 75px;
+  padding-top: 65px;
   max-width: 1600px;
   height: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .header-top {
   margin-bottom: 180px;
-  min-width: 1400px;
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
@@ -103,14 +103,14 @@ button {
   left: -5px;
   right: -5px;
   height: 10px;
-  background-color: yellow;
+  background-color: #fbdc4d;
   z-index: -1;
 }
 .header-top__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 390px;
+  max-width: 425px;
 }
 .header-top__nav-item {
   position: relative;
@@ -132,7 +132,7 @@ button {
   left: 0;
   width: 0;
   height: 5px;
-  background-color: yellow;
+  background-color: #fbdc4d;
   -webkit-transition: .5s;
   transition: .5s;
   z-index: -1;
@@ -150,14 +150,23 @@ button {
 .header-top__icons:last-child {
   margin-right: 0;
 }
+.icon-social-wrapper {
+  display: inline-block;
+}
 .container {
   max-width: 1140px;
+}
+.header-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 .container-about {
   width: 50%;
@@ -165,9 +174,16 @@ button {
 }
 .container-photo {
   width: 50%;
+  max-width: 460px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .my-name__wrapper {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 .my-name {
   font-size: 90px;
@@ -176,6 +192,7 @@ button {
   line-height: 1;
   position: relative;
   z-index: 2;
+  letter-spacing: 5px;
 }
 .my-name:after {
   content: "";
@@ -184,12 +201,12 @@ button {
   left: -5px;
   right: -5px;
   height: 10px;
-  background-color: yellow;
+  background-color: #fbdc4d;
   z-index: -1;
 }
 .container__text-about-me {
   width: 85%;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 .text-about-me {
   font-weight: 500;
@@ -201,7 +218,7 @@ button {
 .button-meet {
   margin-right: 20px;
   display: inline-block;
-  padding: 17px 43px;
+  padding: 19px 43px;
   font-weight: bold;
   font-size: 22px;
   background-color: #fbdc4d;
