@@ -74,6 +74,8 @@ button {
   padding-top: 65px;
   max-width: 1600px;
   height: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .header-top {
   margin-bottom: 180px;
