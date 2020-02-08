@@ -5,10 +5,14 @@
     height: 900px;
     margin-left: auto;
     margin-right: auto;
+    background-image: url(../img/vertical-line.jpg);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
 }
 
 .header-top{
-    margin-bottom: 180px;
+    margin-bottom: 160px;
     max-width: 1400px;
     margin-right: auto;
     margin-left: auto;
@@ -26,6 +30,7 @@
     letter-spacing: 5px;
  }
 
+ //---- подчеркивание лого
  .header-top__logo:after{
     content: "";
     position: absolute;
@@ -36,6 +41,18 @@
     background-color: #fbdc4d;
     z-index: -1;
  }   
+
+ //--- квадратик над с лого
+ .header-top__logo:hover:before{
+     content: "";
+     position: absolute;
+     width: 15px;
+     height: 15px;
+     left: 60px;
+     top: 5px;
+     background-color: #fbdc4d;
+     transform: rotate(45deg);
+ }
 
 .header-top__nav{
     display: flex;
@@ -56,7 +73,13 @@
     &:last-child {
         margin-right: 0;
     }
-}
+
+    &:focus{
+        border: 2px dotted #ea736d;
+    }
+
+   
+ }
 
 .header-top__nav-item:after{
     content: "";
@@ -68,11 +91,14 @@
     background-color: #fbdc4d;
     transition: .5s;
     z-index: -1;
+   
 }
 
 .header-top__nav-item:hover:after{
     width: 100%;
 }
+
+//----ICONS ----
 
  .header-top__icons {
      margin-right: 20px;
@@ -86,9 +112,36 @@
      }
  }
 
- .icon-social-wrapper{
+  .icon-social-wrapper{
      display: inline-block;
  }
+
+.fa-linkedin-in:hover {
+    color: #0077b5;
+}
+
+.fa-linkedin-in:active{
+    color: #0077b5;
+}
+
+
+.fa-github:hover {
+    color: #6cc644;
+}
+
+.fa-github:active{
+    color: #6cc644;
+}
+
+.fa-vk:hover {
+    color: #45668e;
+}
+
+.fa-vk:active{
+    color: #45668e;
+}
+
+//----// ICONS ----
 
 // ---// Header-top------
 
@@ -99,21 +152,37 @@
 
 .header-content{
     display: flex;
-    justify-content: space-between;
     flex-direction: row-reverse;
+    justify-content: space-between;
+    z-index: 5;
 }
 
 .container-about{
     width: 50%;
     border: solid 1px ;
+    z-index: 5;
 
 }
 
 .container-photo{
+    position: relative;
     width: 50%;
     max-width: 460px;
     display: flex;
     align-items: flex-end;
+    z-index: 5;
+}
+
+.container-photo:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(130deg, #f4f8f9 0%, rgba(244,248,249,0) 100%);
+    left: 20%;
+    top: 27%;
+    z-index: -1;
+
 }
 
 .my-name__wrapper{
@@ -124,7 +193,7 @@
     font-size: 90px;
     font-weight: 800;
     color: black;
-    line-height: 1;
+    line-height: 0.8;
     position:relative;
     z-index: 2;
     letter-spacing: 5px;
@@ -133,10 +202,10 @@
 .my-name:after{
     content: "";
     position: absolute;
-    bottom: 24px;
+    bottom: 20px;
     left:-5px;
     right: -5px;
-    height: 10px;
+    height: 12px;
     background-color: #fbdc4d;
     z-index: -1;
 }
@@ -144,17 +213,20 @@
 .container__text-about-me{
     width: 85%;
     margin-bottom: 35px;
+
+    
 }
 
 .text-about-me{
     font-weight: 500;
     color: #393f47;
+
+    &::selection{
+        background-color: #fbdc4d;
+    }
 }
 
-.buttons{
-    border:solid 1px;
-}
-
+//--- Кнопки 
 .button-meet{
     margin-right: 20px;
     display: inline-block;
@@ -162,18 +234,96 @@
     font-weight: bold;
     font-size: 22px;
     background-color: #fbdc4d;
-    border-radius: 30px;
+    border-radius: 50px;
     border:none;
     cursor: pointer;
+
+    &:hover{
+        background-color: #ffd200;
+        transition: 0.2s;
+    }
+
+    &:active{
+        background-color: #e1bc10;
+    }
 }
 
 .button-contacts{
     display: inline-block;
-    padding: 17px 43px;
+    padding: 15px 43px;
     font-weight: bold;
     font-size: 22px;
-    border-radius: 30px;
-    border:solid 2px;
+    border-radius: 50px;
+    border:solid 3px;
     background-color: #fff;
-    color: #393f47;
+    color: #464646;
+
+    &:hover{
+        color: #797979;
+    }
+
+    &:active{
+        color: #181818;
+    }
 }
+
+//---// Кнопки 
+
+.container-photo-bckgr{
+    margin-top: -150px;
+    z-index: 1;
+}
+
+.skills__wrapper{
+    display:flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.skills__title{
+    font-weight: 900; 
+    line-height: 1;
+    margin-bottom: 30px;
+
+
+}
+
+.skills__list{
+    margin-bottom: 45px;
+}
+
+.skills__list-item{
+    position: relative;
+    margin-bottom: 25px;
+    font-size: 24px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.skills__list-item:before{
+    content: "---";
+    position: absolute;
+    display:block;
+    height: 24px;
+    width: 24px;
+}
+
+.skills__icon-social{
+ 
+    display: flex;
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.skills__icon-social-wrapper{
+    margin-right: 30px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
